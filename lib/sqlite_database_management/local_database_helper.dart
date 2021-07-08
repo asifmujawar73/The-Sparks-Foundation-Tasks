@@ -8,23 +8,23 @@ class LocalStorageHelper {
   /// Database Name
   final String _databaseName = 'basic_banking_app_data_storage.db';
 
-  /// Table Name
+  
   final String _userDataTable = 'Users_Data_Store';
   final String _transactionTable = 'Transaction_Table';
 
-  /// Database Columns For User Table Name
+  
   final String _colUserName = 'user_name';
   final String _colEmail = 'user_mail';
   final String _colCurrBal = 'user_balance';
 
-  /// Database Columns for Transaction Table
+
   final String _colDebitedAccEmail = 'debited_email';
   final String _colDebitedAccName = 'debited_name';
   final String _colCreditedAccEmail = 'credited_email';
   final String _colCreditedAccName = 'credited_name';
   final String _colTransactionAmount = 'transacted_amount';
 
-  /// Create Singleton Objects(Only Created once in the whole application)
+  
   static LocalStorageHelper _localStorageHelper;
   static Database _database;
 
@@ -59,10 +59,7 @@ class LocalStorageHelper {
     return getDatabase;
   }
 
-  /// For Current user and connections general data to store
-  /// General Data Plays a Huge role for managing interaction with connections
-
-  /// Create Table for User Data Store
+  
   Future<void> createTableToStoreUserData() async {
     try {
       final Database db = await this.database;
@@ -99,7 +96,6 @@ class LocalStorageHelper {
     }
   }
 
-  /// Take it out all data from User Data Table
   Future<List<Map<String, Object>>> extractDataFromUserStoredData() async {
     try {
       final Database db = await this.database;
@@ -157,7 +153,6 @@ class LocalStorageHelper {
     }
   }
 
-  /// Table for Live Transaction
   Future<void> createTableForLiveTransactions() async {
     try {
       final Database db = await this.database;
@@ -169,7 +164,7 @@ class LocalStorageHelper {
     }
   }
 
-  /// Insert Data in the Transaction Table
+ 
   Future<bool> insertDataInTransactionTable(
       {@required String creditedEmail,
       @required String creditedName,
