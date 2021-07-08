@@ -60,7 +60,7 @@ class _CustomersViewState extends State<CustomersView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: const Color.fromRGBO(34, 48, 60, 1),
+        backgroundColor: const Color.fromRGBO(33, 48, 60, 1),
         floatingActionButton: _addNewUser(),
         appBar: AppBar(
           brightness: Brightness.dark,
